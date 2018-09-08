@@ -1,8 +1,13 @@
 { 
   "presets": [
-    "@babel/env"
+    [ 
+      "@babel/preset-env", {
+        "modules": "commonjs"
+      }
+    ]
   ],
   "plugins": [
-    "@babel/plugin-proposal-numeric-separator"
+    "@babel/plugin-proposal-numeric-separator",
+    "@babel/plugin-transform-destructuring"
   ]
 }

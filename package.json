@@ -2,9 +2,10 @@
   "name": "labogirls",
   "version": "1.0.0",
   "description": "ERP para emprendedores, by BBVABancomer",
-  "private": true, 
+  "private": true,
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
+    "develop": "webpack --mode development --watch",
     "build": "webpack",
     "test": "jest"
   },
@@ -21,11 +22,16 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-transform-destructuring": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-loader": "^8.0.2",
     "jest": "^23.5.0",
+    "lodash-es": "^4.17.10",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8"
+  },
+  "dependencies": {
+    "qrcode": "^1.2.2"
   }
 }
