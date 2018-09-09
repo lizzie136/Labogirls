@@ -4,7 +4,6 @@ import {
   generatePaymentString,
   generateQR
 } from './js/qrgenerator';
-import { isNull } from 'util';
 
 
 superLogin();
