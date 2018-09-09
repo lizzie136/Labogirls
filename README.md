@@ -43,14 +43,14 @@ El procedimiento es fácil. Por medio de aplicaciones en el móvil se despliega 
 
 ### Funcionalidades Identificadas 
 
-- [ ] Administración de los inventarios del comercio.
-
-- [ ] Correos a Clientes, transacción en línea.
+- [ ] Conciliación de pagos QR
 
 - [ ] Disponibilidad de cobros en cualquier lugar. 
 
-- [ ] Conciliación de pagos QR
+- [ ] Correos a Clientes, transacción en línea.
 
-### Diseño de interfaz
+- [ ] Administración de los inventarios del comercio.
 
-[Prototipo clickeable](https://marvelapp.com/edbajij/screen/47638381)
+### Arquitectura 
+
+
