@@ -11,10 +11,14 @@ ERP para emprendedores, by BBVABancomer
 
 ### Funcionalidades Identificadas 
 
-- [ ] Administración de los inventarios del comercio.
-
-- [ ] Correos a Clientes, transacción en línea.
+- [ ] Conciliación de pagos QR
 
 - [ ] Disponibilidad de cobros en cualquier lugar. 
 
-- [ ] Conciliación de pagos QR
+- [ ] Correos a Clientes, transacción en línea.
+
+- [ ] Administración de los inventarios del comercio.
+
+### Arquitectura 
+
+![Arquitectura de la simulación](./docs/architecture.png);
