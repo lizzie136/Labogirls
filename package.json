@@ -19,6 +19,11 @@
     "url": "https://github.com/lizzie136/Labogirls/issues"
   },
   "homepage": "https://github.com/lizzie136/Labogirls#readme",
+  "jest": {
+    "globals": {
+      "BBVABANCOMER_SIMULATOR" : "http://test.com/"
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-numeric-separator": "^7.0.0",
