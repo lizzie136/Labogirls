@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="../css/resumenVentas.css">
+    <title>BBVA Resumen de Ventas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light nav">
+
+
+                <div>
+                    
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
+                </div>
+                <a class="navbar-brand mr-auto" href="#">
+                    <img src="https://www.bancomer.com/content/dam/public-web/bancomer/images/logos/logo-bbva-bancomer-v1.svg" height="25" class="ml-3">
+                </a>
+          
+          
+           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+
+                    <li class="nav-item active">
+                        <a class="nav-link letter" style="color:white" href="Inicio.html">Inicio<span class="sr-only">(current)</span></a>
+                      </li>
+                   
+                  <li class="nav-item active">
+                    <a class="nav-link letter" style="color:white" href="Generar Venta.html">Generar venta<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link letter" style="color:white" href="Resumen de ventas.html">Resumen de ventas</a>
+                  </li>
+                  
+                  <li class="nav-item ">
+                        <a class="nav-link letter" style="color:white" href="../login.html">Cerrar Sesion</a>
+                      </li> 
+                </ul>
+              </div>
+            
+            </nav> 
+            <h1>Resumen Venta</h1>   
+    <svg width="400" height="200"> </svg>
+        <script>
+            var data = [50, 4, 8, 10];
+        //Definimos variab
+            var svg = d3.select("svg"),
+                width = svg.attr("width"),
+                height = svg.attr("height"),
+                radius = Math.min(width, height) / 2,
+                g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+        
+            var color = d3.scaleOrdinal(['#5BBEFF','#D4EDFC','#49A5E6','#237ABA ']);
+        
+            // Generate the pie
+            var pie = d3.pie();
+        
+            // Generate the arcs
+            var arc = d3.arc()
+                        .innerRadius(0)
+                        .outerRadius(radius);
+        
+            //Generate groups
+            var arcs = g.selectAll("arc")
+                        .data(pie(data))
+                        .enter()
+                        .append("g")
+                        .attr("class", "arc")
+                        
+        
+            //Draw arc paths
+            arcs.append("path")
+                .attr("fill", function(d, i) {
+                    return color(i);
+                })
+                .attr("d", arc);
+        </script>
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+ 
+        </body>
+</html>
