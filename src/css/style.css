@@ -1,0 +1,47 @@
+.nav{
+background-color: #072146;
+}
+
+h6{
+color: #237ABA;
+}
+
+.monto{
+margin-top: 10px;
+width: 300px;
+height: 100px;
+display: block;
+margin: 0.8rem;
+background-color: #F4F4F4;
+color: #000000;
+text-align: center;
+border-width: 10px;
+border-color: #237ABA;
+padding-top: 30px;
+float: left;
+border-top-width: 10px;
+border-right-width: 10px;
+border-bottom-width: 10px;
+border-left-width: 10px;
+}
+
+.col-lg-5 {
+    margin-top: 20px;
+}
+
+.col-lg-5 {
+    margin-top: 20px;
+}
+
+table{
+    table-layout: fixed;
+    
+}
+
+
+#title2{
+   margin-top: 10px;
+   padding-top: 10px;
+   margin-bottom: 15px;
+}
+

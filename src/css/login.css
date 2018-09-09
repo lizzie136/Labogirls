@@ -1,0 +1,21 @@
+nav{
+    background-color: #072146;
+  }
+  button{
+      border-radius: 1px;
+      width: 128px;
+      height: 48px;
+      background: #237ABA;
+      border: 0;
+      color: #fffefe;
+      font-weight: 700;
+      filter: none;
+      box-shadow: none;
+      cursor: pointer;
+      padding: 0;
+      align-content: center;
+      margin: 10px;
+  }
+  #usuario{
+      background-color: #E9E9E9;
+  }
