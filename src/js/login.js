@@ -1,7 +1,7 @@
 const superLogin = () => {
   let signLogin = document.getElementById('btnInicio');
   // Ingresa el usuario
-  signLogin.addEventListener('click', event => {
+  signLogin && signLogin.addEventListener('click', event => {
     let user = document.getElementById('usuario').value;
     let passwordUser = document.getElementById('password').value;
     console.log(user);
@@ -22,4 +22,5 @@ const superLogin = () => {
   });
 
 };
-exports default superLogin;
+
+export default superLogin;

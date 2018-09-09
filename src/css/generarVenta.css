@@ -1,8 +1,37 @@
 .nav{
     background-color: #072146;
     }
-    
-    .invisible{
-       display: none;
-        }
-        
+.container{
+    display: inline-flex;
+    margin-top: 50px;
+}
+img{
+    margin-left: 80px;
+}
+#s1{
+    margin-top:25px;
+margin-left: 17px;
+}
+.s2{
+   margin-top: 30px;
+}
+.s3{
+   margin-top: 30px; 
+        text-align: center;
+       margin-left: 84px;
+}
+.s4{
+    display: inline-flex;
+}
+.s5{
+    margin-top: 22px;
+        margin-left: 21px;
+        /* margin-top: 44px; */
+        margin-right: 178px;
+}
+.s6{
+    margin-top: 25px;
+            margin-left: 17px;
+            
+}
+

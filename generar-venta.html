@@ -1,75 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/css/generarVenta.css">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BBVA Generar Venta</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css/generarVenta.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BBVA Generar Venta</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light nav">
-         <div>
-             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                    <a class="navbar-brand mr-auto" href="#">
-                        <img src="https://www.bancomer.com/content/dam/public-web/bancomer/images/logos/logo-bbva-bancomer-v1.svg" height="25" class="ml-3">
-                    </a>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <ul class="navbar-nav ">
-                  
-                          <li class="nav-item active">
-                            <a class="nav-link letter" style="color:white" href="Inicio.html">Inicio<span class="sr-only">(current)</span></a>
-                          </li>
-                  
-                          <li class="nav-item active">
-                            <a class="nav-link letter" style="color:white" href="generar-venta.html">Generar venta<span class="sr-only">(current)</span></a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link letter" style="color:white" href="resumen-venta.html">Resumen de ventas</a>
-                          </li>
-                  
-                          <li class="nav-item ">
-                            <a class="nav-link letter" style="color:white" href="../login.html">Cerrar Sesion</a>
-                          </li>
-                        </ul>
-                      </div>
-                </nav> 
-<!--inicia contenido-->
-<div class="container">
-<div class="col-6">
-    <h1>Producto</h1>
-</div>
-
-</div>
-<h4>Productos que venderas</h4>
-<div>
-    <select id="selector" placeholder="producto">
-                <option value="Refresco" data-price="12">Refresco</option>
-                <option value="Papitas"data-price="8">Papitas</option>
-                <option value="Huevo" data-price="36">Huevo</option>
-                <option value="Atùn" data-price="20">Atùn</option>
-        </select>
-    </div>
+  <nav class="navbar navbar-expand-lg navbar-light nav">
     <div>
-        <input type="number" id="cantidad" placeholder = "Ingrese la cantidad " >
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
-    <div id="add1">
+    <a class="navbar-brand mr-auto" href="#">
+      <img src="https://www.bancomer.com/content/dam/public-web/bancomer/images/logos/logo-bbva-bancomer-v1.svg" height="25"
+        class="ml-3">
+    </a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav ">
 
+        <li class="nav-item active">
+          <a class="nav-link letter" style="color:white" href="Inicio.html">Inicio<span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link letter" style="color:white" href="generar-venta.html">Generar venta<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link letter" style="color:white" href="resumen-venta.html">Resumen de ventas</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link letter" style="color:white" href="../login.html">Cerrar Sesion</a>
+        </li>
+      </ul>
     </div>
-    <div id="total">
+  </nav>
+  <!--inicia contenido-->
+  <div class="container">
+    <h1>Producto</h1>
+    <img src="add.PNG" alt="">
+  </div>
+  </div>
+  <h5 id="s1">Productos que venderas</h5>
+  <div class="s2">
+    <select class="custom-select mr-sm-2" style="margin-top: 20" id="products" placeholder="producto">
+      <option value="Refresco" data-price="12">Refresco</option>
+      <option value="Papitas" data-price="8">Papitas</option>
+      <option value="Huevo" data-price="36">Huevo</option>
+      <option value="Atùn" data-price="20">Atùn</option>
+    </select>
+  </div>
+  <div>
+    <input class="s3" type="number" id="quantity" placeholder="Ingrese la cantidad ">
+  </div>
+  <div id="add1">
+  </div>
+  <div class="s4">
+    <h4 class="s5">Total:</h4>
+    <h4 class="s6" id="total"></h4>
+  </div>
+  <div>
+    <button class="btn btn-primary btn-lg active" style="margin-left:117px;margin-top: 55px;" id="crear">Crear QR</button>
+  </div>
 
-    </div>
-    <button id = "crear">Crear QR</button>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="./dist/main.js"></script>
+</body>
 
-    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>   
-            <script src = "../js/firebase.js"></script>
-        </body>
 </html>
