@@ -25,14 +25,15 @@ describe('generatePaymentString', ()=> {
   });
 
   test('generate string over object', ()=>{
-    const obj = { 
-      motive: 'ejemplo', 
+
+    const obj = {
+      concept: 'ejemplo',
       amount: 125.99,
       date: new Date('5/5/2018'),
       userAccount: '5555555',
-      description: 'este es un ejemplo'}
-    const expectectString = '{"motivo":"ejemplo","importe":125.99,"fecha":"2018-05-05T05:00:00.000Z","userAccount":"5555555","description":"este es un ejemplo"}';
-    expect(generatePaymentString(obj)).toBe(expectectString); 
+      description: 'este es un ejemplo'};
+    const expectectString = `${BBVABANCOMER_SIMULATOR}/venta?motivo=undefined&importe=125.99&fecha=Sat%20May%2005%202018%2000%3A00%3A00%20GMT-0500%20(CDT)&userAccount=5555555&description=este%20es%20un%20ejemplo`;
+    expect(generatePaymentString(obj)).toBe(expectectString);
   });
 
   test('generate string with missing parts',  ()=>{

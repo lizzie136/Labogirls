@@ -1,11 +1,11 @@
 import QRCode from 'qrcode';
 
-const generatePaymentString = ({ motive="servicio", amount="0.0", date, userAccount, description}) => {
+const generatePaymentString = ({ motive, amount, date, userAccount, description}) => {
   // motivo
   // importe
   // fecha
-  const obj = { 
-    motivo : motive, 
+  const obj = {
+    motivo : motive,
     importe : amount,
     fecha: date,
     userAccount: userAccount,
@@ -15,7 +15,13 @@ const generatePaymentString = ({ motive="servicio", amount="0.0", date, userAcco
   if(str == '{}') {
     throw new Error('generatePaymentString: Object Payment is empty');
   }
-  return str;
+
+  const baseUrl = `${BBVABANCOMER_SIMULATOR}/venta?`;
+  const params = [];
+  for(let key in obj){
+    params.push(`${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`);
+  }
+  return `${baseUrl}${params.join('&')}`;
 };
 
 const generateQR = (text, element) => {

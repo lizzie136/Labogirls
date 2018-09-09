@@ -76,12 +76,12 @@ window.addEventListener('load', ()=> {
 });
 
 const baseCanvas = document.getElementById('generated-qr');
-const str = generatePaymentString(
-  { 
-    motive: 'ejemplo', 
-    amount: 125.99,
-    date: new Date('5/5/2018'),
-    userAccount: '5555555',
-    description: 'este es un ejemplo'});
+const str = generatePaymentString({
+  motive: 'ejemplo',
+  amount: 125.99,
+  date: new Date('5/5/2018'),
+  userAccount: '5555555',
+  description: 'este es un ejemplo'
+});
 
 baseCanvas && generateQR(str, baseCanvas, (err) => console.log(err));
