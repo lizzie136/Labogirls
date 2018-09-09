@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
     messagingSenderId: "103281908726"
   };
 
-  if(typeof firebase !== 'undefined'){
+  if (typeof firebase !== 'undefined') {
     firebase.initializeApp(config);
     const db = firebase.firestore();
 
@@ -65,15 +65,15 @@ window.addEventListener('load', () => {
           console.error("Error adding document: ", error);
         });
     });
-}
-//Leer documentos
-let ventas = document.getElementById('tableBody');
+  }
+  //Leer documentos
+  let ventas = document.getElementById('tableBody');
 
-ventas && db.collection('ventas').onSnapshot((querySnapshot) => {
-  ventas.innerHTML = '';
-  querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data().id}`);
-    ventas.innerHTML += `
+  ventas && db.collection('ventas').onSnapshot((querySnapshot) => {
+    ventas.innerHTML = '';
+    querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data().id}`);
+      ventas.innerHTML += `
             <tr>
               <td>${doc.data().id}</td>
               <td>${doc.data().canti}</td>
@@ -82,8 +82,8 @@ ventas && db.collection('ventas').onSnapshot((querySnapshot) => {
               <td>${doc.data().cliente}</td>
               <td>${doc.data().date} ${doc.data().time}</td>
             </tr>`;
+    });
   });
-});
 });
 
 const baseCanvas = document.getElementById('generated-qr');
@@ -91,4 +91,12 @@ if (baseCanvas) {
   const str = window.localStorage.getItem('qrdata');
   generateQR(str, baseCanvas, (err) => console.log(err));
 
+}
+
+const backButton = document.querySelector('.qr-container button');
+if(backButton) {
+  backButton.addEventListener('click', (ev)=> {
+    ev.preventDefault();
+    window.location = './generar-venta.html';
+  });
 }
