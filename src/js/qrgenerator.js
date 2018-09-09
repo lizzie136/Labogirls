@@ -1,4 +1,5 @@
 import QRCode from 'qrcode';
+import moment from 'moment';
 
 const generatePaymentString = ({ motive, amount, date, userAccount, description}) => {
   // motivo

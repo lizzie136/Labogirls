@@ -21,7 +21,7 @@
   "homepage": "https://github.com/lizzie136/Labogirls#readme",
   "jest": {
     "globals": {
-      "BBVABANCOMER_SIMULATOR" : "http://test.com/"
+      "BBVABANCOMER_SIMULATOR": "http://test.com/"
     }
   },
   "devDependencies": {
@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "d3": "^5.7.0",
+    "moment": "^2.22.2",
     "qrcode": "^1.2.2"
   }
 }

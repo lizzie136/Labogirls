@@ -29,7 +29,7 @@ describe('generatePaymentString', ()=> {
     const obj = {
       concept: 'ejemplo',
       amount: 125.99,
-      date: new Date('5/5/2018'),
+      date: new Date(),
       userAccount: '5555555',
       description: 'este es un ejemplo'};
     const expectectString = `${BBVABANCOMER_SIMULATOR}/venta?motivo=undefined&importe=125.99&fecha=Sat%20May%2005%202018%2000%3A00%3A00%20GMT-0500%20(CDT)&userAccount=5555555&description=este%20es%20un%20ejemplo`;

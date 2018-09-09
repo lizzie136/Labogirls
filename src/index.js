@@ -1,6 +1,7 @@
 
 import { generatePaymentString, generateQR }from './js/qrgenerator';
 import superLogin from './js/login';
+import moment from 'moment';
 
 
 superLogin();
@@ -79,7 +80,7 @@ const baseCanvas = document.getElementById('generated-qr');
 const str = generatePaymentString({
   motive: 'ejemplo',
   amount: 125.99,
-  date: new Date('5/5/2018'),
+  date: moment().format('DD/MM/YYYY'),
   userAccount: '5555555',
   description: 'este es un ejemplo'
 });
