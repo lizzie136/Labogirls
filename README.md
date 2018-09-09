@@ -53,4 +53,7 @@ El procedimiento es fácil. Por medio de aplicaciones en el móvil se despliega 
 
 ### Arquitectura 
 
+![Benchmark](docs/architecture.png)
 
+El simulador de BBVA se encuentra en el repositorio: 
+[BBVABancomer Simulador](https://github.com/lizzie136/Labogirls-bbva-simulator)
