@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <form id="myform" method="post">
+        <label>Enviar notificacion a :</label>
+        <input type="text" name="to_email" />
+        <br><br>
+        <button>Enviar </button>
+    </form>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_pWGAgE2wGSONbZXrwINLn");
+       })();
+    </script>
+<script src="../src/js/notification.js"></script>  
+</body>
+</html>
