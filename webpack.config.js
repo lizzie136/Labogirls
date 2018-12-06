@@ -26,6 +26,7 @@ module.exports = {
     new webpack.DefinePlugin({
       "BBVABANCOMER_SIMULATOR": JSON.stringify("https://labogirls-bbva-simulator.herokuapp.com"),
       "BBVABANCOMER_USER_ACCOUNT": JSON.stringify("19823343451400"),
+      "BBVFIREBASE": process.env.BBVAFIREBASE
     }),
   ],  
 };

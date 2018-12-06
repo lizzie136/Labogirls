@@ -47,17 +47,16 @@ window.addEventListener('load', () => {
         })
         .then(function (docRef) {
           console.log("Document written with ID: ", docRef.id);
-          document.getElementById("products").selectedIndex = 0;
-          document.getElementById("quantity").value = "";
-          document.getElementById("total").value = "";
+
 
           const str = generatePaymentString({
             motive: producto,
-            amount: cantidad,
+            amount: cantidad*precio,
             date: moment().format('DD/MM/YYYY'),
             userAccount: `${BBVABANCOMER_USER_ACCOUNT}`,
             description: 'Abarrotes Meche'
           });
+
           window.localStorage.setItem('qrdata', str);
           window.location = '/qrgenerator.html';
         })
